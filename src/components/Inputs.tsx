@@ -4,17 +4,24 @@ import intervals from '../intervals';
 const Inputs = () => {
 	return (
 		<form>
-			<input type='number' name='' id='' />
-			<input type='number' name='' id='' />
-			<select name='' id=''>
+			<label htmlFor='starting-amout'>Starting Amount</label>
+			<input type='number' name='starting-amount' />
+
+			<label htmlFor='contribution'>Additionnal Contribution</label>
+			<input type='number' name='contribution' />
+			<select name='interval'>
 				{intervals.map((interval) => (
 					<option value={interval.value}>
 						{interval.description}
 					</option>
 				))}
 			</select>
-			<input type='number' name='' id='' />
-			<input type='number' name='' id='' />
+
+			<label htmlFor='return'>Rate of Return</label>
+			<input type='number' name='return' />
+
+			<label htmlFor='period'>Years to Grow</label>
+			<input type='number' name='period' />
 		</form>
 	);
 };
