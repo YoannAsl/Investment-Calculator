@@ -1,9 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import intervals from '../intervals';
+
+const Form = styled.form`
+	input,
+	select {
+		margin: 0 10px;
+	}
+`;
 
 const Inputs = () => {
 	return (
-		<form>
+		<Form>
 			<label htmlFor='starting-amout'>Starting Amount</label>
 			<input type='number' name='starting-amount' />
 
@@ -22,7 +30,7 @@ const Inputs = () => {
 
 			<label htmlFor='period'>Years to Grow</label>
 			<input type='number' name='period' />
-		</form>
+		</Form>
 	);
 };
 
